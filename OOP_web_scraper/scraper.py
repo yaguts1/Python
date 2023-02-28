@@ -85,16 +85,18 @@ for i in range(len(restaurant_names)):
     print(i)
 #Need to learn how to use pickle to save this objects. Also see if I am able to save a list of the objects. 
 # It is possible
-outfile = open('restaurants.pkl','wb')
+outfile = open('data/restaurants.pkl','wb')
 my_pickled_restaurant_object_list = pickle.dump(restaurant_object_list,outfile) # Pickling the object
 print(f'This is my pickled object:\n{my_pickled_restaurant_object_list}\n')
 outfile.close()
 
-infile = open('restaurants.pkl','rb')
+infile = open('data/restaurants.pkl','rb')
 my_unpickled_restaurant_object_list = pickle.load(infile)
 infile.close()
 
 # print(f'This is my unpickled object:\n{my_unpickled_restaurant_object_list[0].name.decode("UTF-8")}\n')
 
 system("menu.py 1")
+sleep(2)
+system("dataframes.py 1")
 

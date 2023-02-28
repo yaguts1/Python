@@ -1,1 +1,0 @@
-restaurant_object_list

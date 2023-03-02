@@ -97,6 +97,6 @@ infile.close()
 # print(f'This is my unpickled object:\n{my_unpickled_restaurant_object_list[0].name.decode("UTF-8")}\n')
 
 system("menu.py 1")
-sleep(2)
+sleep(1)
 system("dataframes.py 1")
 

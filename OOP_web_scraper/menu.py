@@ -16,7 +16,7 @@ links = []
 index_list_for_menus = []
 restaurant_number = 0
 # Open the pickled object array and read the links for each menu
-infile = open('data/restaurants.pkl','rb')
+infile = open('OOP_web_scraper/data/restaurants.pkl','rb')
 my_unpickled_restaurant_object_list = pickle.load(infile)
 for i in (my_unpickled_restaurant_object_list):
         links.append(i.link)
@@ -56,7 +56,7 @@ def scrape_menu(link, restaurant_number):
     
     index_list_for_menus.append(items_menu_object_list)
     
-    outfile = open('data/menu_items.pkl','wb')
+    outfile = open('OOP_web_scraper\data\menu_items.pkl','wb')
     my_pickled_index_list_for_menus = pickle.dump(index_list_for_menus,outfile) # Pickling the object
     outfile.close()
 

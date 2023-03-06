@@ -13,7 +13,7 @@ restaurant_food_category = []
 cnt = 0
 data = []
 # From now on I am just reading the objects that I've created
-infile = open('data/menu_items.pkl','rb')
+infile = open('OOP_web_scraper\data\menu_items.pkl','rb')
 my_unpickled_index_list_for_menus = pickle.load(infile) 
 infile.close()
 for i in range(len(my_unpickled_index_list_for_menus)):
@@ -45,12 +45,12 @@ for i in range(len(my_unpickled_index_list_for_menus)):
         cnt += 1
 # Making a dataframe and then saving it as a csv file
 df = pd.DataFrame(data, columns=('Nome', 'Preço', 'Descrição', 'Restaurante','link','Tempo Entrega','Frete','Distância','Reviews','Categoria'))
-df.to_csv('data/out.csv',encoding='utf-8-sig')
+df.to_csv('OOP_web_scraper/data/out.csv',encoding='utf-8-sig')
 
 # Code to save the df as a pickle file
-outfile = open('data/df.pkl','wb')
+outfile = open('OOP_web_scraper\data\df.pkl','wb')
 my_pickled_restaurant_object_list = pickle.dump(df,outfile) # Pickling the object
-print(f'This is my pickled object:\n{my_pickled_restaurant_object_list}\n')
+# print(f'This is my pickled object:\n{my_pickled_restaurant_object_list}\n')
 outfile.close()
 
 # Code to unpickle and read the df 

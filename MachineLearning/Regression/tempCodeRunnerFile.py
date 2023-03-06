@@ -1,5 +1,4 @@
-xaxis = cylinders
-yaxis = co2emissions
-pyplot.xticks(range(0,17))
-pyplot.scatter(xaxis,yaxis)
-pyplot.show()
+print(cdf.head(9))
+# # Plotting each of these features:
+# cdf[['CYLINDERS','ENGINESIZE','CO2EMISSIONS','FUELCONSUMPTION_COMB']].hist()
+# plt.show()

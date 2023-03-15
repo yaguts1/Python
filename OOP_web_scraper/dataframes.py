@@ -55,7 +55,7 @@ outfile.close()
 
 # Code to unpickle and read the df 
 
-# infile = open('data/df.pkl','rb')
+# infile = open('OOP_web_scraper\data\df.pkl','rb')
 # unpickled= pickle.load(infile)
 # infile.close()
 # print(unpickled)
